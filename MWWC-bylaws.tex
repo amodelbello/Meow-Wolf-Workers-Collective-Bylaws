@@ -7,6 +7,7 @@
   microtype,
   parskip,
   titlesec,
+  xifthen,
 }
 
 \usepackage{tocloft}
@@ -25,9 +26,23 @@
 \titleformat{\subsection}{\normalfont\normalsize\bfseries}{Section \thesubsection:}{0.5em}{}
 
 % References
-\newcommand{\fullref}[2]{\mbox{\textbf{\MakeUppercase{Article \ref{#1}}, Section \ref{#2}}}}
-\newcommand{\sectionref}[1]{\mbox{\textbf{\MakeUppercase{Article \ref{#1}}}}}
-\newcommand{\subsectionref}[1]{\mbox{\textbf{Section \ref{#1}}}}
+% {article}{section}{paragraph}
+\newcommand{\fullref}[3]{%
+  \mbox{\textbf{%
+    \ifthenelse{\isempty{#1}}%
+    {}%
+    {\MakeUppercase{Article \ref{#1}}}%
+    \ifthenelse{\isempty{#2}}%
+    {}%
+    {%
+      \ifthenelse{\isempty{#1}}{}{, }%
+      Section \ref{#2}%
+    }%
+    \ifthenelse{\isempty{#3}}%
+    {}%
+    {\ref{#3}}%
+  }}%
+}
 
 % Numbered Lists
 \newlist{numberlist}{enumerate}{1}
@@ -40,6 +55,7 @@
 \title{Local Bylaws \\ MMWC/ CWA 7055}
 \date{\today}
 
+
 \begin{document}
 \maketitle
 
@@ -47,6 +63,8 @@
 \addtocontents{toc}{\protect\enlargethispage{\baselineskip}}
 \newpage
 
+\fullref{}{membership}{membership}
+% \otherref{}
 
 \section{Name / Affiliation}
 This union shall be known as Meow Wolf Workers Collective – Communications Workers of America, Local 7055 (MWWC/ CWA 7055).
@@ -63,10 +81,10 @@ The mission of Meow Wolf Workers Collective shall be to represent and serve the 
 The structure of the union shall consist of the following:
 
 \begin{numberlist}
-\item The Membership.
-\item The Executive Board.
-\item The Local Officers.
-\item Various Committees.
+\item The Membership
+\item The Executive Board
+\item The Local Officers
+\item Various Committees
 \end{numberlist}
 
 \section{Governing Authority}
@@ -87,23 +105,23 @@ All workers within the union’s jurisdiction who support the organization’s m
 Membership in the union shall be obtained upon the following:
 
 \begin{numberlist}
-\item The approval of the Membership Committee (cite section), which is authorized to accept or reject membership on behalf of the union, subject to the right of the membership to overrule the decision of the Membership Committee
+\item The approval of the Membership Committee (\fullref{committees}{duties-of-committees}{}), which is authorized to accept or reject membership on behalf of the union, subject to the right of the membership to overrule the decision of the Membership Committee
 \item Payment of an initiation fee of two dollars (\$2.00). The union’s portion of the initiation fee may be waived by the Executive Board and CWA’s portion of the initiation fee may be waived by the CWA Executive Board.
 \end{numberlist}
 
 \subsection{Retirement, Resignation \& Continuation}
-Any member may resign from membership in the Local in accordance with Article V, Section 4 of the CWA Constitution in writing to the Local. Members in good standing who retire or otherwise leave employment may have their membership continue with minimum dues, and may assume the status of at-large members. In the event any such person elects to become an associate member, the person shall lose voting privileges but shall not be required to pay dues.
+Any member may resign from membership in the Local in accordance with Article V, Section 4 of the CWA Constitution in writing to the Local. Members in good standing who retire or otherwise leave employment may have their membership continue with minimum dues, and may assume the status of \textit{at-large members}. In the event any such person elects to become an \textit{associate member}, the person shall lose voting privileges but shall not be required to pay dues.
 
 \subsection{Membership Data}
 Membership data shall include, but is not limited to, information collected on membership forms, through grievance processes, and surveys. Collected membership data shall become property of the Local. Membership data will not be disclosed to any outside organization for any reason except as required by administrative processes, or authorized by membership. The Local’s Executive Board and staff shall take reasonable care to maintain the confidentiality of membership data.
 
 \subsection{Good Standing}\label{good-standing}
 
-A member in good standing is one whose dues are not more than sixty (60) days in arrears. Members in default without good cause for ninety (90) days, after notice in writing by the Local Secretary, shall be automatically dropped from membership. Good cause shall be defined by the Executive Board. During organizing drives, the membership and/or Executive Board shall have the power to waive temporarily the requirement of good standing.
+A member in good standing is one whose dues are not more than sixty (60) days in arrears. Members in default without good cause for ninety (90) days, after notice in writing by the Local Secretary-Treasurer, shall be automatically dropped from membership. Good cause shall be defined by the Executive Board. During organizing drives, the membership and/or Executive Board shall have the power to waive temporarily the requirement of good standing.
 
 \section{Dues}
 \subsection{Dues Requirement}
-The payment of dues shall be required for membership, as described in \fullref{membership}{good-standing}.
+The payment of dues shall be required for membership, as described in \fullref{membership}{good-standing}{}.
 
 \subsection{Dues Amount}
 Members shall be required to pay dues equal to the minimum amount required by the CWA constitution, unless an increase is approved by referendum of membership of the Local. As of the date of ratification of this document, the minimum dues amount required by CWA constitution is defined as one point three percent (1.3\%) of wages up to forty (40) hours per pay period. Hours worked over forty shall not incur additional dues.
@@ -157,12 +175,12 @@ All Bargaining Unit meetings shall be held at such time and place as the members
 Special meetings may be called by a majority vote of the Local Executive Board, or by a petition signed by no fewer than fifteen (15) members. Upon receipt of a proper petition, the Local officers shall call a special meeting for the purpose set forth in the petition to be held within ten (10) days.
 
 \subsection{Due Notice}
-Due notice of at least seven (7) days must be given prior to any union meeting. In the event a Special meeting is called for under the provisions of \subsectionref{special-meetings}, due notice may be shortened to three (3) days.
+Due notice of at least seven (7) days must be given prior to any union meeting. In the event a Special meeting is called for under the provisions of \fullref{}{special-meetings}{}, due notice may be shortened to three (3) days.
 
 \subsection{Quorums}
-The number constituting a quorum for Membership meetings shall be the number of members present. Special Meetings called for under the provisions of \subsectionref{special-meetings} shall have a quorum of no less than ten (10) members. A majority of the members of a work committee shall be the quorum for those bodies. For All Bargaining Unit meetings no quorum shall be necessary.
+The number constituting a quorum for Membership meetings shall be the number of members present. Special Meetings called for under the provisions of \fullref{}{special-meetings}{} shall have a quorum of no less than ten (10) members. A majority of the members of a work committee shall be the quorum for those bodies. For All Bargaining Unit meetings no quorum shall be necessary.
 
-\section{Committees}
+\section{Committees}\label{committees}
 \subsection{Creation of Committees}
 The Local shall have the following committees:
 \begin{numberlist}
@@ -188,7 +206,7 @@ Committee chairs shall be nominated and voted on by the membership of their resp
 
 Any member of any Local committee may be removed by majority vote of the Local Executive Board, subject to the right of the Local to overrule the action of the Executive Board. A committee member may be removed by action of the Local in a membership meeting, or by referendum of the membership in good standing of the Local.
 
-\subsection{Duties of Committees}
+\subsection{Duties of Committees}\label{duties-of-committees}
 \begin{description}[labelwidth=\linewidth, listparindent=0pt]
 \item[Membership Committee]
 Shall accept or reject membership applications in accordance with the bylaws and rules of this Local and Article V of the CWA Constitution and policies of the Union.
@@ -227,10 +245,10 @@ Shall advocate for their members and strive to improve the communities where the
 \section{Temporary Committees}
 The president, with the assistance and approval of the Executive Board may create a temporary, special, or ad-hoc committee for a specific and well-defined task with the assumption of disbandment after completion of said task.
 
-The formation of a Bylaws Committee as described in \sectionref{amendments} shall also be considered a temporary committee.
+The formation of a Bylaws Committee as described in \fullref{amendments}{}{} shall also be considered a temporary committee.
 
 \section{referendums}
-Any member in Good Standing of the Local (see \fullref{membership}{good-standing} for definition) may petition for the creation of a referendum. Should a member present a petition for referendum to the Executive Board bearing the signatures of thirty (30) percent of membership in Good Standing of the Local, then that petition shall be accepted for membership wide vote.
+Any member in Good Standing of the Local (see \fullref{membership}{good-standing}{} for definition) may petition for the creation of a referendum. Should a member present a petition for referendum to the Executive Board bearing the signatures of thirty (30) percent of membership in Good Standing of the Local, then that petition shall be accepted for membership wide vote.
 
 If the petition calls for an amendment to these bylaws, it shall be governed by the language of Article XVIII -reference-. Otherwise the Election Committee shall call a membership wide vote within thirty (30) days, and should the majority of members who vote on that referendum indicate that it should take effect, the language of the referendum shall be put into effect, so long as it is not found to be in conflict with any law, legal agreement, the CWA constitution, or these Bylaws.
 
@@ -307,7 +325,7 @@ The Officers of the union shall be the Local President, Local Vice President, Lo
 \end{letterlist}
 
 \subsection{Local Officer Eligibility}
-Any member in good standing (see \fullref{membership}{good-standing} for definition) shall be eligible for election as an Officer. However, no member may serve in more than one (1) office simultaneously. Area Vice Presidents must be nominated from and elected by members in good standing within their respective Area.
+Any member in good standing (see \fullref{membership}{good-standing}{} for definition) shall be eligible for election as an Officer. However, no member may serve in more than one (1) office simultaneously. Area Vice Presidents must be nominated from and elected by members in good standing within their respective Area.
 
 \subsection{Definition of Executive Board}
 The Executive Board shall be a body of members that coordinates work, ensures that all decisions of the membership are carried out in a timely and effective manner, and otherwise carries out the administration of the union between membership meetings.
@@ -362,7 +380,7 @@ The Local Election Committee shall also conduct any referenda submitted to the m
 All questions concerning the conduct and challenges of elections shall be determined by the Local Election Committee, subject to the right of appeal to the governing body and membership of the union in accordance with Article XV of the CWA Constitution. ??? link?
 
 \subsection{General Provisions}
-Only members of the union in good standing (see \fullref{membership}{good-standing} for definition) shall be eligible to vote for Local Officers.
+Only members of the union in good standing (see \fullref{membership}{good-standing}{} for definition) shall be eligible to vote for Local Officers.
 
 The nominee in any election for Local Officer receiving the majority of the votes cast shall be declared elected. If no one nominee has a majority on the first ballot, the vote shall be taken again and the two (2) nominees having the greatest number of votes shall be nominees on the second ballot.
 
