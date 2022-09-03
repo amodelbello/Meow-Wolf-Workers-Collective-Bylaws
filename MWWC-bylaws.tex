@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 % \usepackage[letterpaper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
-\usepackage[letterpaper, margin=3cm]{geometry}
+\usepackage[letterpaper, margin=3cm, top=2cm]{geometry}
 \usepackage{
   booktabs,
   enumitem,
@@ -8,9 +8,20 @@
   parskip,
   titlesec,
   xifthen,
+  tocloft,
+  fancyhdr,
+  lastpage,
 }
 
-\usepackage{tocloft}
+% Headers/Footers
+\fancyhf{}
+\pagestyle{fancy}
+\fancyfoot[L]{\scshape\nouppercase{MWWC \-- CWA, Local 7055 Union Bylaws}}
+\fancyfoot[R]{\thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0em}
+\renewcommand{\footrulewidth}{.01em}
+
+% TOC Spacing
 \cftsetindents{sec}{0em}{4em}
 \cftsetindents{subsec}{0em}{4em}
 
@@ -46,13 +57,17 @@
 
 % Numbered Lists
 \newlist{numberlist}{enumerate}{1}
-\setlist[numberlist,1]{label=\arabic*)}
+\setlist[numberlist,1]{label=\textbf{\arabic*)}}
 
 % Lettered Lists
 \newlist{letterlist}{enumerate}{1}
-\setlist[letterlist,1]{label=(\alph*)}
+\setlist[letterlist,1]{label=\textbf{\Alph*.}}
 
-\title{Local Bylaws \\ MMWC/ CWA 7055}
+% Paragraph Lists
+\newlist{paralist}{enumerate}{1}
+\setlist[paralist,1]{label=(\alph*)}
+
+\title{Meow Wolf Workers Collective \--- CWA, Local 7055 \\ Local Bylaws}
 \date{\today}
 
 
@@ -60,11 +75,8 @@
 \maketitle
 
 \tableofcontents
-\addtocontents{toc}{\protect\enlargethispage{\baselineskip}}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
 \newpage
-
-\fullref{}{membership}{membership}
-% \otherref{}
 
 \section{Name / Affiliation}
 This union shall be known as Meow Wolf Workers Collective – Communications Workers of America, Local 7055 (MWWC/ CWA 7055).
@@ -91,11 +103,11 @@ The structure of the union shall consist of the following:
 
 The affairs of the union shall be governed by its membership in accordance with the Constitution and policies of CWA in the following manner:
 
-\begin{letterlist}
+\begin{numberlist}
 \item Through action taken in membership meetings or by referendum of the membership.
 \item Through actions and decisions of the Executive Board between membership meetings.
 \item Through actions of the Local Officers between meetings of the Executive Board.
-\end{letterlist}
+\end{numberlist}
 
 \section{Membership}\label{membership}
 \subsection{Eligibility}
