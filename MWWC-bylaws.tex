@@ -10,7 +10,7 @@
   tocloft,
   fancyhdr,
   lastpage,
-  pifont,
+  background,
 }
 
 % Headers/Footers
@@ -27,6 +27,11 @@
 
 % Don't indent paragraphs
 \setlength\parindent{0pt}
+
+% Background Image
+\backgroundsetup{scale = 1, angle = 0, opacity = 0.04,
+  contents = {\includegraphics[width = \paperwidth,
+    height = \paperheight, keepaspectratio] {mwwc-logo.png}}}
 
 % Sections
 \renewcommand{\thesection}{\Roman{section}}
