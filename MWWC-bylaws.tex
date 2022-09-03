@@ -1,6 +1,5 @@
-\documentclass[12pt]{article}
-% \usepackage[letterpaper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
-\usepackage[letterpaper, margin=3cm, top=2cm]{geometry}
+\documentclass[11pt]{article}
+\usepackage[letterpaper, top=3cm, right=4cm, bottom=3cm, left=4cm]{geometry}
 \usepackage{
   booktabs,
   enumitem,
@@ -11,6 +10,7 @@
   tocloft,
   fancyhdr,
   lastpage,
+  pifont,
 }
 
 % Headers/Footers
@@ -30,11 +30,11 @@
 
 % Sections
 \renewcommand{\thesection}{\Roman{section}}
-\titleformat{\section}{\normalfont\large\bfseries\MakeUppercase}{ARTICLE \thesection:}{0.5em}{}
+\titleformat{\section}{\normalfont\Large\bfseries\MakeUppercase}{ARTICLE \thesection:}{0.5em}{}
 
 % Sub Sections
 \renewcommand{\thesubsection}{\arabic{subsection}}
-\titleformat{\subsection}{\normalfont\normalsize\bfseries}{Section \thesubsection:}{0.5em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{Section \thesubsection:}{0.5em}{}
 
 % References
 % {article}{section}{paragraph}
@@ -57,7 +57,7 @@
 
 % Numbered Lists
 \newlist{numberlist}{enumerate}{1}
-\setlist[numberlist,1]{label=\textbf{\arabic*)}}
+\setlist[numberlist,1]{label=\textbf{\arabic*.}}
 
 % Lettered Lists
 \newlist{letterlist}{enumerate}{1}
@@ -77,7 +77,6 @@
 \tableofcontents
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \newpage
-
 \section{Name / Affiliation}
 This union shall be known as Meow Wolf Workers Collective – Communications Workers of America, Local 7055 (MWWC/ CWA 7055).
 
@@ -92,22 +91,22 @@ The mission of Meow Wolf Workers Collective shall be to represent and serve the 
 \section{Structure}
 The structure of the union shall consist of the following:
 
-\begin{numberlist}
+\begin{itemize}
 \item The Membership
 \item The Executive Board
 \item The Local Officers
 \item Various Committees
-\end{numberlist}
+\end{itemize}
 
 \section{Governing Authority}
 
 The affairs of the union shall be governed by its membership in accordance with the Constitution and policies of CWA in the following manner:
 
-\begin{numberlist}
+\begin{itemize}
 \item Through action taken in membership meetings or by referendum of the membership.
 \item Through actions and decisions of the Executive Board between membership meetings.
 \item Through actions of the Local Officers between meetings of the Executive Board.
-\end{numberlist}
+\end{itemize}
 
 \section{Membership}\label{membership}
 \subsection{Eligibility}
@@ -141,10 +140,10 @@ Members shall be required to pay dues equal to the minimum amount required by th
 Should the minimum amount of dues required by the CWA constitution increase, the amount of dues required by this Local shall not be less than the newly set minimum amount required. Should the minimum amount required by CWA decrease below the amount described above, the amount required by this Local may decrease if approved by a referendum of membership of the Local.
 
 \subsection{Payment of Dues}
-\begin{letterlist}
+\begin{paralist}
 \item Members shall pay dues per the CWA constitution
 \item Members who are temporarily unemployed due to injury, illness, downsizing, privatization, or a suspension or termination that is being appealed shall find their obligation to pay monthly dues suspended.
-\end{letterlist}
+\end{paralist}
 
 \section{Convention Delegates}
 \subsection{Selection of Delegates}
@@ -195,7 +194,7 @@ The number constituting a quorum for Membership meetings shall be the number of 
 \section{Committees}\label{committees}
 \subsection{Creation of Committees}
 The Local shall have the following committees:
-\begin{numberlist}
+\begin{itemize}
 \item Membership
 \item Organizing
 \item Mobilization
@@ -207,7 +206,7 @@ The Local shall have the following committees:
 \item Education
 \item Legislative/Political
 \item Community Action
-\end{numberlist}
+\end{itemize}
 
 \subsection{Committee Participation}
 Members of all committees shall be nominated by individual members of the Local, and accepted after a majority vote of the Local Executive Board, subject to the right of the Local membership to overrule the action of the Executive Board by referendum of membership of the Local.
@@ -289,8 +288,9 @@ Any time a bargaining unit comes into being within the jurisdiction of the Local
 The Officers of the union shall be the Local President, Local Vice President, Local Secretary, Local Treasurer, and Area Vice Presidents.
 
 \subsection{Responsibilities of Local Officers}
-\begin{letterlist}
-\item The Local President shall:
+\begin{description}
+\item[The Local President shall:]
+  \mbox{}
   \begin{numberlist}
     \item Serve as the primary contact person for the union,
     \item Enforce these Bylaws,
@@ -304,7 +304,8 @@ The Officers of the union shall be the Local President, Local Vice President, Lo
     \item Chair the Executive Board
   \end{numberlist}
 
-\item The Local Executive Vice President shall:
+\item[The Local Executive Vice President shall:]
+  \mbox{}
   \begin{numberlist}
     \item Assist the Local President,
     \item Help coordinate activities throughout the Local,
@@ -313,7 +314,8 @@ The Officers of the union shall be the Local President, Local Vice President, Lo
     \item Perform such other additional duties as may be assigned by the Local, the Local Executive Board or the Local President.
   \end{numberlist}
 
-\item The Local Secretary Treasurer shall:
+\item[The Local Secretary Treasurer shall:]
+  \mbox{}
   \begin{numberlist}
     \item Be responsible for the maintenance of all bank accounts
     \item Account of all receipts and expenditures to the membership and Executive Board in the form of monthly and annual financial reports
@@ -326,15 +328,16 @@ The Officers of the union shall be the Local President, Local Vice President, Lo
     \item  furnish the CWA District Vice-President and the International Secretary-Treasurer with copies of any changes to these Bylaws within ten (10) days after such changes are adopted
     \item Certify the Local delegates to the CWA Convention to the International Secretary-Treasurer within the time limits specified in Article VIII of the CWA Constitution
     \item Perform such other additional duties as may be assigned by the Local, the Local Executive Board or the Local President.
-    \end{numberlist}
+  \end{numberlist}
 
-\item Area Vice Presidents
+\item[Area Vice Presidents shall:]
+  \mbox{}
   \begin{numberlist}
     \item Represent their Area on the Executive Board
     \item Serve as primary contact for matters specifically relevant to their Area
     \item Handle grievances within their Area
   \end{numberlist}
-\end{letterlist}
+\end{description}
 
 \subsection{Local Officer Eligibility}
 Any member in good standing (see \fullref{membership}{good-standing}{} for definition) shall be eligible for election as an Officer. However, no member may serve in more than one (1) office simultaneously. Area Vice Presidents must be nominated from and elected by members in good standing within their respective Area.
@@ -347,13 +350,13 @@ The Executive Board shall act as the decision-making body of the union between m
 \subsection{Composition and Responsibilities of the Executive Board}
 The Executive Board shall be composed of the following:
 
-\begin{letterlist}
+\begin{itemize}
   \item President
   \item Executive Vice President
   \item Secretary Treasurer
   \item An Area Vice President for each Area within the Local
   \item Two (2) at-large Executive Board members
-\end{letterlist}
+\end{itemize}
 
 The procedures for nominating and electing at-large members to the Executive Board shall be the same as apply to Local Officers The term of office shall be the same as the term of office for Local Officers.
 
@@ -444,14 +447,11 @@ The financial records of this Local shall be audited by a Certified Public Accou
 The calling, conduct and termination of strikes affecting this Local shall at all times be carried out in compliance with the rules prescribed by the Union and Article XVIII of its Constitution.
 
 \section{Amendments}\label{amendments}
-After adoption, these bylaws may be amended by a member, or group of members, submitting a proposal to the Executive Board. The Executive Board shall then convene a Bylaws Committee for review and recommendation. The Bylaws Committee will issue a recommendation, including compliance with laws and the CWA Constitution, for the Executive Board who will determine if the proposed amendment shall be voted upon by the Membership in good standing. The proposed amendment will then be introduced at the next regularly scheduled membership meeting or will be advertised via normal communication channels (i.e. local newsletter, bulletin boards, email, direct mail) at least 15 days in advance. This will be followed by a majority vote of members in good standing of the Local. The vote shall be held on the same day as the subsequent regularly scheduled membership meeting or by referenda.
+After adoption, these bylaws may be amended by a member, or group of members, submitting a proposal to the Executive Board. The Executive Board shall then convene a Bylaws Committee for review and recommendation. The Bylaws Committee will issue a recommendation, including compliance with laws and the CWA Constitution, for the Executive Board who will determine if the proposed amendment shall be voted upon by the Membership in good standing. The proposed amendment will then be introduced at the next regularly scheduled membership meeting or will be advertised via normal communication channels (i.e. local newsletter, bulletin boards, email, direct mail) at least 15 days in advance. This will be followed by a majority vote of members in good standing of the Local. The vote shall be held on the same day as the subsequent regularly scheduled membership meeting or by referendum.
 
 \section{Adoption}
 These bylaws shall be adopted upon the approval of a majority of the members voting upon their adoption in the membership meeting called for that purpose or by referendum of the membership.
 
+\vspace{1cm}
+\large{\textbf{These bylaws adopted:} \date{September 19, 2022}}
 \end{document}
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
