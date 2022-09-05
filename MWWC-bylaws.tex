@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[letterpaper, top=3cm, right=4cm, bottom=3cm, left=4cm]{geometry}
+\usepackage[letterpaper, top=3cm, right=3.5cm, bottom=3cm, left=3.5cm]{geometry}
 \usepackage{
   booktabs,
   enumitem,
@@ -11,15 +11,24 @@
   fancyhdr,
   lastpage,
   background,
+  hyperref,
 }
 
-% Headers/Footers
-\fancyhf{}
-\pagestyle{fancy}
-\fancyfoot[L]{\scshape\nouppercase{MWWC \-- CWA, Local 7055 Union Bylaws}}
-\fancyfoot[R]{\thepage\ of \pageref{LastPage}}
-\renewcommand{\headrulewidth}{0em}
-\renewcommand{\footrulewidth}{.01em}
+% Set up TOC and reference links
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={MWWC Union Bylaws},
+    pdfpagemode=FullScreen,
+}
+\urlstyle{same}
+
+% Background Image
+\backgroundsetup{scale = 1.3, angle = 0, opacity = 0.03,
+  contents = {\includegraphics[width = \paperwidth,
+    height = \paperheight, keepaspectratio] {mwwc-logo.png}}}
 
 % TOC Spacing
 \cftsetindents{sec}{0em}{4em}
@@ -28,18 +37,21 @@
 % Don't indent paragraphs
 \setlength\parindent{0pt}
 
-% Background Image
-\backgroundsetup{scale = 1.3, angle = 0, opacity = 0.03,
-  contents = {\includegraphics[width = \paperwidth,
-    height = \paperheight, keepaspectratio] {mwwc-logo.png}}}
+% Headers/Footers
+\fancyhf{}
+\pagestyle{fancy}
+\fancyfoot[L]{\scshape\nouppercase{Meow Wolf Workers Collective \-- CWA, Local 7055}}
+\fancyfoot[R]{\thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0em}
+\renewcommand{\footrulewidth}{.01em}
 
 % Sections
-\renewcommand{\thesection}{\Roman{section}}
-\titleformat{\section}{\normalfont\Large\bfseries\MakeUppercase}{ARTICLE \thesection:}{0.5em}{}
+\renewcommand{\thesection}{ARTICLE \Roman{section}}
+\titleformat{\section}{\normalfont\Large\bfseries\MakeUppercase}{\thesection:}{0.5em}{}
 
 % Sub Sections
-\renewcommand{\thesubsection}{\arabic{subsection}}
-\titleformat{\subsection}{\normalfont\large\bfseries}{Section \thesubsection:}{0.5em}{}
+\renewcommand{\thesubsection}{Section \arabic{subsection}}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection:}{0.5em}{}
 
 % References
 % {article}{section}{paragraph}
@@ -47,12 +59,12 @@
   \mbox{\textbf{%
     \ifthenelse{\isempty{#1}}%
     {}%
-    {\MakeUppercase{Article \ref{#1}}}%
+    {\ref{#1}}%
     \ifthenelse{\isempty{#2}}%
     {}%
     {%
       \ifthenelse{\isempty{#1}}{}{, }%
-      Section \ref{#2}%
+      \ref{#2}%
     }%
     \ifthenelse{\isempty{#3}}%
     {}%
@@ -83,7 +95,9 @@
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \newpage
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Beginning of document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Name / Affiliation}
 This union shall be known as Meow Wolf Workers Collective – Communications Workers of America, Local 7055 (MWWC/ CWA 7055).
 
