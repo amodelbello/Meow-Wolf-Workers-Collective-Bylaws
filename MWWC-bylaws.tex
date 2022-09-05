@@ -12,14 +12,18 @@
   lastpage,
   background,
   hyperref,
+  xcolor,
+  sectsty,
 }
+\definecolor{headerColor}{HTML}{444444}
+\definecolor{linkColor}{HTML}{444444}
 
 % Set up TOC and reference links
 \hypersetup{
     colorlinks=true,
-    linkcolor=black,
+    linkcolor=linkColor,
     filecolor=magenta,
-    urlcolor=black,
+    urlcolor=linkColor,
     pdftitle={MWWC Union Bylaws},
     pdfauthor={MWWC}
     pdfpagemode=FullScreen,
@@ -49,12 +53,12 @@
 \renewcommand{\footrulewidth}{.01em}
 
 % Sections
+\sectionfont{\color{headerColor}\Large\MakeUppercase}
 \renewcommand{\thesection}{ARTICLE \Roman{section}}
-\titleformat{\section}{\normalfont\Large\bfseries\MakeUppercase}{\thesection:}{0.5em}{}
 
 % Sub Sections
-\renewcommand{\thesubsection}{Section \arabic{subsection}}
-\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection:}{0.5em}{}
+\subsectionfont{\color{headerColor}\Large}
+\renewcommand{\thesubsection}{Section \arabic{subsection}:}
 
 % References
 % {article}{section}{paragraph}
@@ -282,7 +286,7 @@ The president, with the assistance and approval of the Executive Board may creat
 
 The formation of a Bylaws Committee as described in \fullref{amendments}{}{} shall also be considered a temporary committee.
 
-\section{referendums}
+\section{Referendums}
 Any member in Good Standing of the Local (see \fullref{membership}{good-standing}{} for definition) may petition for the creation of a referendum. Should a member present a petition for referendum to the Executive Board bearing the signatures of thirty (30) percent of membership in Good Standing of the Local, then that petition shall be accepted for membership wide vote.
 
 If the petition calls for an amendment to these bylaws, it shall be governed by the language of Article XVIII -reference-. Otherwise the Election Committee shall call a membership wide vote within thirty (30) days, and should the majority of members who vote on that referendum indicate that it should take effect, the language of the referendum shall be put into effect, so long as it is not found to be in conflict with any law, legal agreement, the CWA constitution, or these Bylaws.
