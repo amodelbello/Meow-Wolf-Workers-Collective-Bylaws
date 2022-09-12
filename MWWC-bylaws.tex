@@ -16,7 +16,7 @@
   sectsty,
 }
 \definecolor{headerColor}{HTML}{000000}
-\definecolor{linkColor}{HTML}{444444}
+\definecolor{linkColor}{HTML}{000000}
 
 % Set up TOC and reference links
 \hypersetup{
@@ -58,12 +58,12 @@
 
 % Sections
 \sectionfont{\color{headerColor}\Large\MakeUppercase}
-\renewcommand{\thesection}{ARTICLE \Roman{section}:}
+\renewcommand{\thesection}{ARTICLE \Roman{section}}
 \newcommand{\article}[1]{\vspace{.75cm}\section{#1}}
 
 % Sub Sections
 \subsectionfont{\color{headerColor}\Large}
-\renewcommand{\thesubsection}{Section \arabic{subsection}:}
+\renewcommand{\thesubsection}{Section \arabic{subsection}}
 \newcommand{\articlesection}[1]{\vspace{.25cm}\subsection{#1}}
 
 % References
@@ -87,7 +87,8 @@
 
 % Numbered Lists
 \newlist{numberlist}{enumerate}{1}
-\setlist[numberlist,1]{label=\textbf{\arabic*.}}
+% \setlist[numberlist,1]{label=\textbf{\arabic*.}}
+\setlist[numberlist,1]{label=\arabic*.}
 
 % Lettered Lists
 \newlist{letterlist}{enumerate}{1}
@@ -112,29 +113,28 @@
 % Beginning of document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \article{Name / Affiliation}
-This union shall be known as Meow Wolf Workers Collective – Communications Workers of America, Local 7055 (MWWC/ CWA 7055).
-
-The union shall be affiliated with the Communications Workers of America (AFL–CIO).
+This Local  shall be known as Meow Wolf Workers Collective – Communications Workers of America, Local 7055 (MWWC/ CWA 7055).
 
 \article{Jurisdiction}
 Jurisdiction of this Local shall be the jurisdiction assigned by the Union and appearing on the face of the Local Charter.
 
 \article{Mission}
-The mission of Meow Wolf Workers Collective shall be to represent and serve the workers within its jurisdiction in accordance with the Bylaws and Rules of the Local and the Constitution and policies of the Union.
+The mission of Meow Wolf Workers Collective shall be to represent and serve the workers within its jurisdiction in accordance with the Bylaws, Rules of the Local, and the Constitution and policies of the Union.
 
 \article{Structure}
 The structure of the union shall consist of the following:
 
-\begin{itemize}
+\begin{numberlist}
 \item The Membership
 \item The Executive Board
 \item The Local Officers
 \item Various Committees
-\end{itemize}
+\item Stewards
+\end{numberlist}
 
 \article{Governing Authority}
 
-The affairs of the union shall be governed by its membership in accordance with the Constitution and policies of CWA in the following manner:
+The affairs of the union shall be governed by its \textit{members in good standing} (defined in \fullref{membership}{good-standing}{}), henceforth referred to as “(local) member(s)” or “(local) membership”  in accordance with the Constitution and policies of CWA in the following manner:
 
 \begin{itemize}
 \item Through action taken in membership meetings or by referendum of the membership.
@@ -142,23 +142,25 @@ The affairs of the union shall be governed by its membership in accordance with 
 \item Through actions of the Local Officers between meetings of the Executive Board.
 \end{itemize}
 
+In all cases, decisions made by the Local Officers may be overruled by those of the Executive Board, which can themselves be overruled by Membership via referendum (\fullref{referendums}{}{}).
+
 \article{Membership}\label{membership}
 \articlesection{Eligibility}
 All workers within the union’s jurisdiction who support the organization’s mission are eligible for membership in the Local. Eligibility is granted regardless of employer, employment status, craft, skill, age, race/ethnicity, gender, sexual orientation, religious or political beliefs or affiliation, disability, or immigration status.
 
 \articlesection{Admission to Membership}
-Membership in the union shall be obtained upon the following:
+Membership in the union shall be obtained upon satisfaction of the following two conditions:
 
 \begin{numberlist}
-\item The approval of the Membership Committee (\fullref{committees}{duties-of-committees}{}), which is authorized to accept or reject membership on behalf of the union, subject to the right of the membership to overrule the decision of the Membership Committee
-\item Payment of an initiation fee of two dollars (\$2.00). The union’s portion of the initiation fee may be waived by the Executive Board and CWA’s portion of the initiation fee may be waived by the CWA Executive Board.
+\item The approval of the Membership Committee (\fullref{committees}{duties-of-committees}{}), which is authorized to accept or reject membership on behalf of the union.
+\item Payment of an initiation fee of two dollars (\$2.00). The Local’s portion of the initiation fee may be waived by the Executive Board and the Union’s portion of the initiation fee may be waived by the Union Executive Board.
 \end{numberlist}
 
 \articlesection{Retirement, Resignation \& Continuation}
-Any member may resign from membership in the Local in accordance with Article V, Section 4 of the CWA Constitution in writing to the Local. Members in good standing who retire or otherwise leave employment may have their membership continue with minimum dues, and may assume the status of \textit{at-large members}. In the event any such person elects to become an \textit{associate member}, the person shall lose voting privileges but shall not be required to pay dues.
+Any member may resign from membership in the Local in accordance with \href{https://cwa-union.org/for-locals/cwa-constitution\#A5}{Article V, Section 4} of the CWA Constitution in writing to the Local. Members in good standing who retire or otherwise leave employment may have their membership continue with minimum dues, and may assume the status of \textit{at-large members}. Any such person may also elect to become an associate member, and in so doing shall lose voting privileges but shall not be required to pay dues.
 
 \articlesection{Membership Data}
-Membership data shall include, but is not limited to, information collected on membership forms, through grievance processes, and surveys. Collected membership data shall become property of the Local. Membership data will not be disclosed to any outside organization for any reason except as required by administrative processes, or authorized by membership. The Local’s Executive Board and staff shall take reasonable care to maintain the confidentiality of membership data.
+Membership data shall include, but is not limited to, information collected via membership forms and surveys, and information collected through grievance processes. Collected membership data shall become property of the Local. Membership data will not be disclosed to any outside organization for any reason except as required by administrative processes, or authorized by membership. The Local’s Executive Board and staff shall take reasonable care to maintain the confidentiality of membership data.
 
 \articlesection{Good Standing}\label{good-standing}
 
@@ -169,14 +171,14 @@ A member in good standing is one whose dues are not more than sixty (60) days in
 The payment of dues shall be required for membership, as described in \fullref{membership}{good-standing}{}.
 
 \articlesection{Dues Amount}
-Members shall be required to pay dues equal to the minimum amount required by the CWA constitution, unless an increase is approved by referendum of membership of the Local. As of the date of ratification of this document, the minimum dues amount required by CWA constitution is defined as one point three percent (1.3\%) of wages up to forty (40) hours per pay period. Hours worked over forty shall not incur additional dues.
+Members shall be required to pay dues equal to the minimum amount required by the CWA constitution, unless an increase is approved by referendum of membership of the Local. As of the date of ratification of this document, the minimum dues amount required by CWA constitution is defined as one point three percent (1.3\%) of gross wages up to forty (40) hours per week. Hours paid as overtime  shall not incur additional dues.
 
-Should the minimum amount of dues required by the CWA constitution increase, the amount of dues required by this Local shall not be less than the newly set minimum amount required. Should the minimum amount required by CWA decrease below the amount described above, the amount required by this Local may decrease if approved by a referendum of membership of the Local.
+Should the minimum amount of dues required by the CWA constitution increase, the amount of dues required by this Local shall not be less than the newly set minimum amount required. Should the minimum amount required by CWA decrease below the amount described above, the amount required by this Local may decrease if approved by a referendum of membership of the Local. The dues amount can be changed at any time by amendment (\fullref{amendments}{}{}) to these bylaws as long as the amount is not less than the amount required by the CWA constitution.
 
 \articlesection{Payment of Dues}
 \begin{paralist}
 \item Members shall pay dues per the CWA constitution
-\item Members who are temporarily unemployed due to injury, illness, downsizing, privatization, or a suspension or termination that is being appealed shall find their obligation to pay monthly dues suspended.
+\item Members who are temporarily unemployed due to injury, illness, downsizing, privatization, or a suspension or termination that is being appealed shall have their obligation to pay monthly dues suspended.
 \end{paralist}
 
 \article{Convention Delegates}
@@ -191,42 +193,44 @@ The Local shall determine the number of delegates to the Convention in the follo
 \end{numberlist}
 
 \articlesection{Election of Additional Delegates}
-Additional delegates and alternate delegates to the Union Convention shall be elected by the membership voting by secret ballot conducted not less than thirty (30) days in advance of the Union Convention.
+The President, Executive Vice President and Secretary-Treasurer shall be elected to both the office and as delegates to any CWA Convention.
 
-\article{Local Meetings \& Conduct of Meetings and Local Business}
+Additional delegates and alternate delegates to the Union Convention shall be elected by
+the membership voting by secret ballot conducted not less than thirty (30) days
+in advance of the Union Convention.
+
+\article{Conduct of Meetings and Local Business}\label{conduct-of-meetings}
 \articlesection{Conduct of Business}
-Membership meetings and any other business of this union shall be conducted under these Bylaws and rules of the union and in conformity with the CWA Constitution. On questions where the Local bylaws, the Local rules or the Union Constitution do not clearly apply, Robert's Rules of Order shall govern.
+Membership meetings and any other business of this union shall be conducted under these Bylaws and rules of the union and in conformity with the CWA Constitution. On questions where the Local bylaws, the Local rules, or the Union Constitution do not clearly apply, Robert's Rules of Order shall govern.
 
 \articlesection{Membership Meetings}
 Regular Membership meetings of this Local shall be held at such time and place as the members may determine by vote. The order of business shall be:
 
 \begin{numberlist}
 \item Call to order
-\item Roll call
-\item Reading and action on previous meeting notes
-\item Financial report
-\item Officer reports
+\item Approve minutes of previous meetings
+\item Read through agenda
+\item Open the forum for additional points to add
+\item Carry out the conversation
 \item Committee reports
 \item Old business
 \item New business
-\item Good and welfare
 \item Adjournment
 \end{numberlist}
 
 \articlesection{Bargaining Unit Meetings}
-All Bargaining Unit meetings shall be held at such time and place as the members may determine by vote. Such meetings shall be informative by nature and shall not include official business.
+All Bargaining Unit meetings shall be held at such time and place as the members may determine by vote. Such meetings shall be informative by nature, and no motions shall be brought to the floor.
 
 \articlesection{Special Meetings}\label{special-meetings}
 Special meetings may be called by a majority vote of the Local Executive Board, or by a petition signed by no fewer than fifteen (15) members. Upon receipt of a proper petition, the Local officers shall call a special meeting for the purpose set forth in the petition to be held within ten (10) days.
 
 \articlesection{Due Notice}
-Due notice of at least seven (7) days must be given prior to any union meeting. In the event a Special meeting is called for under the provisions of \fullref{}{special-meetings}{}, due notice may be shortened to three (3) days.
+Due notice of at least seven (7) days must be given prior to any regular membership meeting. In the event a Special meeting is called for under the provisions of \fullref{}{special-meetings}{}, due notice may be shortened to three (3) days. Committees shall define their own due notice requirement.
 
 \articlesection{Quorums}
-The number constituting a quorum for Membership meetings shall be the number of members present. Special Meetings called for under the provisions of \fullref{}{special-meetings}{} shall have a quorum of no less than ten (10) members. A majority of the members of a work committee shall be the quorum for those bodies. For All Bargaining Unit meetings no quorum shall be necessary.
+The number constituting a quorum for Membership meetings shall be the number of members present. Special Meetings called for under the provisions of \fullref{}{special-meetings}{} shall have a quorum of no less than ten (10) percent of membership. A majority of the members of a committee shall be the quorum for those bodies. For All Bargaining Unit meetings no quorum shall be necessary. Committees shall define their own Quorum for committee meetings.
 
 \article{Committees}\label{committees}
-\articlesection{Creation of Committees}
 The Local shall have the following committees:
 \begin{itemize}
 \item Membership
@@ -236,20 +240,19 @@ The Local shall have the following committees:
 \item Communications
 \item IT
 \item Finance
-\item Human Rights
+\item Human Rights (Women’s and Equity)
 \item Education
 \item Legislative/Political
 \item Community Action
 \end{itemize}
 
 \articlesection{Committee Participation}
-Members of all committees shall be nominated by individual members of the Local, and accepted after a majority vote of the Local Executive Board, subject to the right of the Local membership to overrule the action of the Executive Board by referendum of membership of the Local.
-
-Vacancies on committees shall be filled in the same manner as the original nomination and vote, and shall be filled within thirty (30) days of the vacancy.
-
-Committee chairs shall be nominated and voted on by the membership of their respective committees.
-
-Any member of any Local committee may be removed by majority vote of the Local Executive Board, subject to the right of the Local to overrule the action of the Executive Board. A committee member may be removed by action of the Local in a membership meeting, or by referendum of the membership in good standing of the Local.
+\begin{paralist}
+\item Members of all committees shall themselves volunteer, or be nominated by individual members of the Local.
+\item Committee chairs shall be nominated and voted on by the membership of their respective committees and confirmed by the Executive Board. Perspective committee chairs may serve in that capacity while waiting for Executive Board approval.
+\item Vacancies of committee chairs shall be filled in the same manner as the original nomination and vote.
+  \item Any member of any Local committee may be removed by majority vote of the Local Executive Board. A committee member may be removed by action of the Local in a membership meeting, or by referendum of the membership.
+\end{paralist}
 
 \articlesection{Duties of Committees}\label{duties-of-committees}
 \begin{description}[labelwidth=\linewidth, listparindent=0pt]
@@ -258,6 +261,7 @@ Shall accept or reject membership applications in accordance with the bylaws and
 
 \item[Organizing Committee]
 Shall assist the Local officers and members in organizing all non-union employees within the Local's jurisdiction as well as unorganized workers in external units.
+
 \item[Mobilization Committee]
 Shall have the responsibility to assist the officers, stewards and members to systematically, through a structure, educate members on issues and achieve a high level of participation in collective actions.
 
@@ -265,20 +269,19 @@ Shall have the responsibility to assist the officers, stewards and members to sy
 Shall conduct all nominations and elections of this Local, and conduct any referenda submitted to the membership,  with reasonable opportunity for each member to nominate and vote for the candidate of their choice. A member shall not be permitted to serve on the Election Committee if they are a candidate for any office of the Local.
 
 \item[Communications Committee]
-  Shall craft messages intended for consumption by internal and external organizations, and the public using various media.
+Shall craft messages intended for consumption by internal and external organizations, and the public using various media.
 
 \item[IT Committee]
 Responsible for maintaining the union website, administering union emails, and administering any online services necessary for the well-ordered operation of the union. It is the responsibility of the IT committee to maintain and protect any credentials, passwords, and personal information necessary to fulfill its duties.
 
 \item[Finance Committee]
-
-Shall coordinate an annual audit of the local’s finances, conduct periodic meetings to ensure the local’s finances are in order and submit a recommended budget in September of each year to the Membership for approval. This committee shall be chaired by the Local Secretary/Treasurer
+Shall coordinate an annual audit of the local’s finances, conduct periodic meetings to ensure the local’s finances are in order and submit a recommended budget in September of each year to the Membership for approval. This committee shall be chaired by the Local Secretary-Treasurer
 
 \item[Education Committee]
 Shall coordinate training opportunities for all volunteers/stewards and others who may require them.
 
 \item[Human Rights Committee]
-  Shall ensure that all members of the union are free from discrimination and vigoursly oppose all discrimination until all discrimination is eliminated.
+Shall ensure that all members of the union are free from discrimination and vigoursly oppose all discrimination until all discrimination is eliminated.
 
 \item[Legislative/Political Action Committee]
 Shall advocate for laws which benefit all workers and oppose laws which are detrimental to workers at all levels of government
@@ -287,15 +290,33 @@ Shall advocate for laws which benefit all workers and oppose laws which are detr
 Shall advocate for their members and strive to improve the communities where they live.
 \end{description}
 
-\article{Temporary Committees}
-The president, with the assistance and approval of the Executive Board may create a temporary, special, or ad-hoc committee for a specific and well-defined task with the assumption of disbandment after completion of said task.
+\articlesection{Temporary Committees}
+The president, with the assistance and approval of the Executive Board may create a temporary, special, or ad-hoc committee for a specific and well-defined task with the condition of disbandment after completion of said task.
 
 The formation of a Bylaws Committee as described in \fullref{amendments}{}{} shall also be considered a temporary committee.
 
-\article{Referendums}
-Any member in Good Standing of the Local (see \fullref{membership}{good-standing}{} for definition) may petition for the creation of a referendum. Should a member present a petition for referendum to the Executive Board bearing the signatures of thirty (30) percent of membership in Good Standing of the Local, then that petition shall be accepted for membership wide vote.
+\articlesection{Hybrid Employer-Based Committees}
+Committees may be formed that interact directly with management. Examples of such committees are the Safety Committee and the Labor Management Committee. Members of such committees may meet sporadically or not at all beyond their requisite interaction with management. However, they should report out at all membership meetings as any other committee.
 
-If the petition calls for an amendment to these bylaws, it shall be governed by the language of Article XVIII -reference-. Otherwise the Election Committee shall call a membership wide vote within thirty (30) days, and should the majority of members who vote on that referendum indicate that it should take effect, the language of the referendum shall be put into effect, so long as it is not found to be in conflict with any law, legal agreement, the CWA constitution, or these Bylaws.
+\articlesection{Area Representation On Committees}
+Ensuring proportional representation of each Area (\fullref{areas}{}{}) in committee membership shall not be mandated. However, the Executive Board and Committee chairs will make a reasonable effort to prioritize and otherwise encourage diverse membership that includes members from all areas.
+
+
+\article{Referendums}\label{referendums}
+\articlesection{Creation of a Referendum}
+\begin{paralist}
+  \item At any time, the President or Executive Board may bring forth any referendum to a vote of membership.
+
+  \item Any member may petition for the creation of a referendum. Should a member present a petition for referendum to the Executive Board bearing the signatures of twenty-five (25) percent of membership, then that petition shall be accepted for membership-wide vote.
+\end{paralist}
+
+\articlesection{Referendum Vote}
+\begin{paralist}
+  \item If the referendum  calls for an amendment to these bylaws, it shall be governed by the language of \fullref{amendments}{}{}. Otherwise the Election Committee shall call a membership-wide vote within thirty (30) days.
+
+  \item Should at least ten (10) percent of members cast a vote on the matter of the referendum, the majority vote in favor of it taking effect,  the language of the referendum  is not found to be in conflict with any law, legal agreement, or the CWA constitution, and the referendum is not intended to amend these Bylaws, the language of the referendum shall be put into effect.
+\end{paralist}
+
 
 \article{Oath of Office}
 Each elected officer of the Local, after meeting all other qualifications, shall be duly installed upon taking the following oath:
@@ -305,32 +326,34 @@ Each elected officer of the Local, after meeting all other qualifications, shall
 
 ``I promise to faithfully discharge my duties according to the bylaws and rules of the Local and the Constitution and policies of the Union.
 
-``I further promise to give my successor in office all books and records in my possession. I shall at all times endeavor to serve my Local and the Union to the best of my ability, so help me (deity or equivalent of your choosing)''
+``I further promise to give my successor in office all books and records in my possession. I shall at all times endeavor to serve my Local and the Union to the best of my ability, so help me (deity or equivalent of your choosing, or not)''
 \end{quote}
 
 Reasonable effort should be made to have Oaths of Office taken in the presence of membership, under a full moon, and whilst eating a banana. Howling at the moon after the oath is taken is encouraged but not required.
 
-\article{Areas}
+
+\article{Areas}\label{areas}
 \articlesection{Definition of an Area}
-An Area within the Local is a logical grouping of workers within the jurisdiction of the Local who share either a common bargaining unit, geographic distribution, or similar shared interest.
+An Area within the Local is a logical grouping of workers within the jurisdiction of the Local who share either a common bargaining unit, geographic distribution, or similar shared interest. The Executive Board shall be the primary authority on which Area a given member belongs to.
 
 \articlesection{Addition of New Areas}
-Any time a bargaining unit comes into being within the jurisdiction of the Local, that unit shall constitute an Area. Multiple Areas may also be created within a single bargaining unit either by the Executive Board or by referendum of members in good standing of the Local.
+Any time a bargaining unit comes into being within the jurisdiction of the Local, that unit shall constitute an Area. Multiple Areas may also be created within a single bargaining unit either by the Executive Board or by referendum.
+
 
 \article{Local Officers, Executive Board, \& Stewards}
 \articlesection{Definition of Local Officers}
-The Officers of the union shall be the Local President, Local Vice President, Local Secretary, Local Treasurer, and Area Vice Presidents.
+The Officers of the union shall be the Local President, Local Executive Vice President, Local Secretary-Treasurer, and Area Vice Presidents.
 
 \articlesection{Responsibilities of Local Officers}
 \begin{description}
 \item[The Local President shall:]
   \mbox{}
   \begin{numberlist}
-    \item Serve as the primary contact person for the union
-    \item Enforce these Bylaws
+    \item Serve as the primary contact person for the union,
+    \item Enforce these Bylaws,
     \item Report all actions of the Executive Board and Local Officers to the membership
     \item Chair membership, bargaining unit and special meetings of the union
-    \item Be the ex-officio chair of all committees except the Finance and Election Committees
+    \item Be the ex-officio chair of all committees except the Finance and Election Committees.
     \item Ensure that grievances are processed in a fair and equitable manner
     \item Coordinate programs of the Union as suggested by the Int’l Union, AFL-CIO or other bodies
     \item Supervise any local staff who shall be hired with approval of the Executive Board
@@ -341,11 +364,13 @@ The Officers of the union shall be the Local President, Local Vice President, Lo
 \item[The Local Executive Vice President shall:]
   \mbox{}
   \begin{numberlist}
-    \item Assist the Local President
-    \item Help coordinate activities throughout the Local
+
+    \item Assist the Local President,
+    \item Help coordinate activities throughout the Local,
+    \item Be an official member of all committees, with the exception of the election committee
     \item Countersign checks for approved expenses
-    \item Perform the duties of the Local President in/their absence
-    \item Perform such other additional duties as may be assigned by the Local, the Local Executive Board or the Local President
+    \item Perform the duties of the Local President in their absence.
+    \item Perform such other additional duties as may be assigned by the Local, the Local Executive Board or the Local President.
   \end{numberlist}
 
 \item[The Local Secretary Treasurer shall:]
@@ -354,102 +379,107 @@ The Officers of the union shall be the Local President, Local Vice President, Lo
     \item Be responsible for the maintenance of all bank accounts
     \item Account of all receipts and expenditures to the membership and Executive Board in the form of monthly and annual financial reports
     \item Cause the payment of all approved and budgeted bills of the local
-    \item File all reports or filings required by federal, state or local law
-    \item Perform such other additional duties as may be assigned by the Local, the Local Executive Board or the Local President
-    \item Be responsible for the recording and distribution of the minutes of membership and Executive Board meetings
+    \item File all reports or filings required by federal, state or local law.
+    \item Be responsible for the recording and distribution of the minutes of membership and Executive Board meetings,
     \item Maintain records of members, mailing lists and files
     \item Maintain notes and records of all meetings
-    \item  furnish the CWA District Vice-President and the International Secretary-Treasurer with copies of any changes to these Bylaws within ten (10) days after such changes are adopted
+    \item Furnish the CWA District Vice-President and the International Secretary-Treasurer with copies of any changes to these Bylaws within ten (10) days after such changes are adopted
     \item Certify the Local delegates to the CWA Convention to the International Secretary-Treasurer within the time limits specified in \href{https://cwa-union.org/for-locals/cwa-constitution\#A8}{Article VIII} of the CWA Constitution
-    \item Perform such other additional duties as may be assigned by the Local, the Local Executive Board or the Local President
+    \item Perform such other additional duties as may be assigned by the Local, the Local Executive Board or the Local President.
   \end{numberlist}
 
 \item[Area Vice Presidents shall:]
   \mbox{}
   \begin{numberlist}
-    \item Represent their Area on the Executive Board
-    \item Serve as primary contact for matters specifically relevant to their Area
-    \item Handle grievances within their Area
+    \item Represent their Area on the Executive Board and be responsible for the interest of those members working in their respective area
+    \item Serve as primary contact for matters specifically relevant to their Area and coordinate information flow back and forth to the Executive Board for all members in their area
+    \item May, at their discretion, convene and chair Area sub-committees
+    \item Handle grievances within their Area in cooperation with Local Stewards
+    \item Perform such duties as may be assigned by the local, local Executive Board, or local president
   \end{numberlist}
 \end{description}
 
 \articlesection{Local Officer Eligibility}
-Any member in good standing (see \fullref{membership}{good-standing}{} for definition) shall be eligible for election as an Officer. However, no member may serve in more than one (1) office simultaneously. Area Vice Presidents must be nominated from and elected by members in good standing within their respective Area.
+Any member shall be eligible for election as an Officer. However, no member may serve in more than one (1) office simultaneously. Area Vice Presidents must be nominated from and elected by members within their respective Area.
 
 \articlesection{Definition of Executive Board}
-The Executive Board shall be a body of members that coordinates work, ensures that all decisions of the membership are carried out in a timely and effective manner, and otherwise carries out the administration of the union between membership meetings.
-
-The Executive Board shall act as the decision-making body of the union between membership meetings as long as its decisions follow the policies set by the membership and do not contradict these Bylaws. Its decisions will be subject to democratic mechanisms, such as, any decision can be transformed into a referendum or any decision can be rescinded by a majority vote of union members. Executive Board members shall be required to attend all membership meetings, unless excused.
+\begin{paralist}
+  \item The Executive Board shall be a body of members that coordinates work, ensures that all decisions of the membership are carried out in a timely and effective manner, and otherwise carries out the administration of the union between membership meetings.
+  \item The Executive Board shall act as the decision-making body of the union between membership meetings as long as its decisions follow the policies set by the membership and do not contradict these Bylaws. Its decisions will be subject to democratic mechanisms. Any decision can be transformed into a referendum and any decision can be rescinded by a majority vote of union members. Executive Board members shall be required to attend all membership meetings, unless excused.
+\end{paralist}
 
 \articlesection{Composition and Responsibilities of the Executive Board}
 The Executive Board shall be composed of the following:
-
-\begin{itemize}
-  \item President
-  \item Executive Vice President
-  \item Secretary Treasurer
-  \item An Area Vice President for each Area within the Local
-  \item Two (2) at-large Executive Board members
-\end{itemize}
-
-The procedures for nominating and electing at-large members to the Executive Board shall be the same as apply to Local Officers The term of office shall be the same as the term of office for Local Officers.
-
-In the event of a vacancy for any reason, the membership shall have the power to elect a new Board member by majority vote at any membership meeting to serve the remainder of the term.
-
-The membership shall strive to elect at-large members to the Executive Board that reflect the diversity of the membership in all respects. Towards this end, the membership shall have the power to specify the number of Board members and from which work areas, geographic locations, and/or job classifications individual Board members may be elected. If the Executive Board is in any manner insufficiently diverse, there will be a procedure to redress it.
+\begin{paralist}
+  \item The Executive Board shall be composed of the following: Local President, Local Executive Vice President, Local Secretary-Treasurer, and Area Vice President for each Area within the Local, and two (2) additional Executive Board members.
+  \item The procedures for nominating and electing additional members to the Executive Board shall be the same as apply to President, Executive Vice President, and Secretary Treasurer. Additional Executive Board members may be nominated from any Area of the Local, or be at-large members of the Local.
+  \item In the event of a vacancy for any reason, the membership shall have the power to elect a new Board member by majority vote at any membership meeting to serve the remainder of the term.
+  \item The membership shall strive to elect at-large members to the Executive Board that reflect the diversity of the membership in all respects.
+\end{paralist}
 
 \articlesection{Executive Board Meetings}
-The time and location of Executive Board meetings shall be set by the Local President. Special Executive Board meetings may be called by a majority of its members. Executive Board meetings shall be open to all members of the union.
-
-All decisions of the Executive Board shall be by majority vote of its members. Executive Board members may make motions and vote by electronic mail or telephone, provided all Executive Board members have equivalent access to whatever means is employed and reasonable opportunity to vote on all motions.
-
-The Local Secretary-Treasurer shall ensure that all actions and decisions of the Executive Board and the votes of each member are reported to the membership in a timely manner.
+\begin{paralist}
+  \item The time and location of Executive Board meetings shall be set by the Local President.
+  \item Special Executive Board meetings may be called by a majority of its members.
+  \item Executive Board meetings shall be open to all members of the Local, so long as they do not disrupt the proceedings. Only members of the Executive board shall be allowed to vote on motions.
+  \item All decisions of the Executive Board shall be by majority vote of its members.
+  \item Executive Board members may make motions and vote electronically or by telephone, provided all Executive Board members have equivalent access to whatever means is employed and reasonable opportunity to vote on all motions.
+  \item The Local Secretary-Treasurer shall ensure that all actions and decisions of the Executive Board and the votes of each member are reported to the membership in a timely manner. Should an Executive Board member call for a roll-call vote during a meeting it shall be granted and the Local Secretary-Treasurer shall record the manner in which each Executive Board member has voted.
+\end{paralist}
 
 \articlesection{Stewards}
-The Local shall have as many Stewards as may be appointed by the Local President, consistent with the parameters of the CBA. Stewards shall attend all membership meetings, unless excused.
+\begin{paralist}
+  \item The Local shall have as many Stewards as may be appointed by the Local President, consistent with the parameters of the CBA.
+  \item Stewards shall process grievances through steps as the President of the Local or Area Vice Presidents may direct.
+  \item Stewards shall attend all membership meetings, unless excused.
+  \item Stewards shall work under the direction of the Local President and perform such other additional duties as may be assigned by the Local, Local Executive Board, Area Vice Presidents, or the Local President.
+\end{paralist}
 
-Stewards shall work under the direction of the Local President and perform such other additional duties as may be assigned by the Local, Local Executive Board, or the Local President.
 
-\article{Nomination and Election of Local Officers and Convention Delegates}
+\article{Nomination and Election of Local Officers}
 \articlesection{Nomination}
-Nominations shall be made from the floor at any meeting of the union held during the month of September of an election year. It is the responsibility of the nominating member(s) to ensure beforehand that each nominee has agreed to stand for the position for which they are being nominated.
-
-All members must be notified of the offices to be filled and the proper method of submitting nominations at least fifteen (15) days prior to the first union meeting scheduled during September of an election year.
+\begin{paralist}
+  \item Nominations shall be made from the floor at any meeting of the union held during the month of September of an election year. It is the responsibility of the nominating member(s) to ensure beforehand that each nominee has agreed to stand for the position for which they are being nominated.
+  \item The President, Executive Vice President, and the Secretary-Treasurer shall be nominated for both the office and as a delegate to the CWA Convention. Ballots shall say both the office and Convention delegate.
+  \item All members must be notified of the offices to be filled and the proper method of submitting nominations at least fifteen (15) days prior to the first union meeting scheduled during September of an election year. There shall be no write in votes.
+\end{paralist}
 
 \articlesection{Election}
-The election of Local Officers shall be held during the month of October of an election year by either secret ballot vote of the membership or by referendum as decided by the Local Election Committee and upon approval of the Executive Board.
-
-Notice of elections (and referendum ballots when applicable) shall be mailed or emailed to each member not less than fifteen (15) days prior to the date and time set for the return of the ballots.
+\begin{paralist}
+  \item The election of Local Officers shall be held during the month of October of an election year by secret ballot vote of the membership as decided by the Local Election Committee and upon approval of the Executive Board.
+  \item Notice of elections (and referendum ballots when applicable) shall be mailed, emailed or otherwise sent electronically, to each member not less than fifteen (15) days prior to the date and time set for the return of the ballots.
+  \item Area Vice Presidents shall be nominated from and elected by the members in their respective Area.
+\end{paralist}
 
 \articlesection{Local Election Committee}
-The nomination and election of Local Officers shall be conducted under the supervision of the Local Election Committee. This committee shall have the authority and responsibility to see that nominations and elections are conducted in accordance with federal law, the CWA Constitution and these Bylaws, with reasonable opportunity for each member to nominate and vote for the candidate of their choice.
-
-The Local Election Committee shall also conduct any referenda submitted to the membership.
-
-All questions concerning the conduct and challenges of elections shall be determined by the Local Election Committee, subject to the right of appeal to the governing body and membership of the union in accordance with \href{https://cwa-union.org/for-locals/cwa-constitution\#A15}{Article XV of the CWA Constitution}.
+\begin{paralist}
+  \item The nomination and election of Local Officers and Area Vice Presidents shall be conducted under the supervision of the Local Election Committee. This committee shall have the authority and responsibility to see that nominations and elections are conducted in accordance with federal law, the CWA Constitution and these Bylaws, with reasonable opportunity for each member to nominate and vote for the candidate of their choice.
+  \item The Local Election Committee shall also conduct any referendums submitted to the membership.
+  \item All questions concerning the conduct and challenges of elections shall be determined by the Local Election Committee, subject to the right of appeal to the governing body and membership of the union in accordance with \href{https://cwa-union.org/for-locals/cwa-constitution\#A15}{Article XV of the CWA Constitution}.
+\end{paralist}
 
 \articlesection{General Provisions}
-Only members of the union in good standing (see \fullref{membership}{good-standing}{} for definition) shall be eligible to vote for Local Officers.
-
-The nominee in any election for Local Officer receiving the majority of the votes cast shall be declared elected. If no one nominee has a majority on the first ballot, the vote shall be taken again and the two (2) nominees having the greatest number of votes shall be nominees on the second ballot.
-
-The nominees in any other election receiving the majority of votes cast shall be declared elected. If no one nominee has a majority on the first ballot, the vote shall be taken again and the two (2) nominees having the greatest number of votes shall be nominees on the second ballot. For at-large Executive Board members, the two nominees with the largest plurality of votes shall be considered to have been elected.
-
-The term of office for all elected positions shall be for three (3) years.
-
-The term of office of outgoing Officers shall expire thirty (30) days after certification of the election results, by which time they shall have delivered all books, records, monies and property to the newly elected Officers.
-
-The membership and/or Executive Board shall have the power to define additional responsibilities for Officers as needed.
+\begin{paralist}
+  \item Only members shall be eligible to vote in local elections.
+  \item The nominee in any election for President, Executive Vice President, Secretary-Treasurer and Area Vice Presidents receiving the majority of the votes cast shall be declared elected. If no one nominee has a majority on the first ballot, the vote shall be taken again and the two (2) nominees having the greatest number of votes shall be nominees on the second ballot. The nominee receiving the majority of votes on the second ballot shall be elected. The President, Executive Vice President and Secretary Treasurer shall be nominated and elected for both their respective office and as delegates to the CWA Convention.
+  \item For at-large Executive Board members, the two nominees with the largest plurality of votes shall be considered to have been elected.
+  \item The term of office for all elected positions shall be for three (3) years.
+  \item The term of office of outgoing Officers shall expire thirty (30) days after certification of the election results, by which time they shall have delivered all books, records, monies and property to the newly elected Officers.
+  \item The membership and Executive Board shall have the power to define additional responsibilities for Officers as needed.
+\end{paralist}
 
 \articlesection{Resignation and Vacancies}
-An Officer may resign in writing to the Local President or by verbal announcement at an Executive Board meeting or membership meeting. In the event of a vacancy in the office of the Local President, the Executive Vice President shall assume the position of President. All other vacancies in Local Officers shall be appointed by the Executive Board, subject to approval of the Membership at the next regularly scheduled meeting
+\begin{paralist}
+  \item An Officer may resign in writing to the Local President or by verbal announcement at an Executive Board meeting or membership meeting.
+  \item In the event of a vacancy in the office of the Local President, the Executive Vice President shall assume the position of President.
+  \item All other vacancies in Local Officers shall be appointed by the Executive Board, subject to approval of the Membership at the next regularly scheduled meeting, or by special meeting as defined in \fullref{conduct-of-meetings}{special-meetings}{}.
+\end{paralist}
 
 \articlesection{Recall of Local Officers and Executive Board}
-Any elected Officer of the union may be recalled in accordance with the provisions of \href{https://cwa-union.org/for-locals/cwa-constitution\#A21}{Article XXI, Section 2}, and \href{https://cwa-union.org/for-locals/cwa-constitution\#A22}{Article XXII, Section 8}, of the CWA Constitution. A recall petition must be preferred by twenty percent (20\%) of the membership.
-
-Executive Board members may be recalled by the same process described in Section 6 ??? of this Article.
-
-Officers shall serve in an administrative capacity only, with all the rights and responsibilities of membership, but no special authority over non-administrative matters.
+\begin{paralist}
+  \item Any elected Officer of the union may be recalled in accordance with the provisions of \href{https://cwa-union.org/for-locals/cwa-constitution\#A21}{Article XXI, Section 2}, and \href{https://cwa-union.org/for-locals/cwa-constitution\#A22}{Article XXII, Section 8}, of the CWA Constitution. A recall petition must be preferred by twenty percent (20\%) of the membership.
+  \item Officers and other Executive Board members shall serve in an administrative capacity only, with all the rights and responsibilities of membership, but no special authority over non-administrative matters.
+\end{paralist}
 
 \article{Charges, Trials and Appeals}
 \articlesection{Charges}
@@ -469,23 +499,23 @@ A Trial Court of this Local shall be composed of five (5) persons, who are membe
 Our fiscal year shall run from October 1 to September 30
 
 \articlesection{Bank Accounts}
-All bank accounts shall be in the name of the union and shall bear the signatures of the Local President, Executive Vice President, Local Secretary Treasurer, and up to two others designated by the Executive Board.
+All bank accounts shall be in the name of the Union and shall bear the signatures of the Local President, Executive Vice President, Local Secretary-Treasurer, and up to two others designated by the Executive Board.
 
 \articlesection{Allocation of Funds}
 The Executive Board and Local Officers shall be responsible for allocating funds according to budgets ratified by the membership. The membership, Executive Board, or any committee may request a full account of all receipts and expenditures from any member or body of members.
 
 \articlesection{Annual Audit}
-The financial records of this Local shall be audited by a Certified Public Accountant, or by a committee established by the Local, at the end of each fiscal year. The results of such an audit shall be made available for the inspection of any member of the Local and a copy thereof shall be sent to the District Vice President and the Union’s Secretary Treasurer.
+The financial records of this Local shall be audited by a Certified Public Accountant, or by a committee established by the Local, at the end of each fiscal year. The results of such an audit shall be made available for the inspection of any member of the Local and a copy thereof shall be sent to the District Vice President and the Union’s Secretary-Treasurer.
 
 \article{Strikes}
 The calling, conduct and termination of strikes affecting this Local shall at all times be carried out in compliance with the rules prescribed by the Union and \href{https://cwa-union.org/for-locals/cwa-constitution\#A18}{Article XVIII of its Constitution}.
 
 \article{Amendments}\label{amendments}
-After adoption, these bylaws may be amended by a member, or group of members, submitting a proposal to the Executive Board. The Executive Board shall then convene a Bylaws Committee for review and recommendation. The Bylaws Committee will issue a recommendation, including compliance with laws and the CWA Constitution, for the Executive Board who will determine if the proposed amendment shall be voted upon by the Membership in good standing. The proposed amendment will then be introduced at the next regularly scheduled membership meeting or will be advertised via normal communication channels (i.e. local newsletter, bulletin boards, email, direct mail) at least 15 days in advance. This will be followed by a majority vote of members in good standing of the Local. The vote shall be held on the same day as the subsequent regularly scheduled membership meeting or by referendum.
+After adoption, these bylaws may be amended by a member, or group of members, submitting a proposal to the Executive Board. The Executive Board shall then convene a Bylaws Committee for review and recommendation. The Bylaws Committee will issue a recommendation, including compliance with laws and the CWA Constitution, for the Executive Board who will determine if the proposed amendment shall be voted upon by the Membership. The proposed amendment will then be introduced at the next regularly scheduled membership meeting or will be advertised via normal communication channels (i.e. local newsletter, bulletin boards, email, direct mail) at least (15) days in advance. This will be followed by a majority vote of members in good standing of the Local. The vote shall be held on the same day as the subsequent regularly scheduled membership meeting or by referendum.
 
 \article{Adoption}
 These bylaws shall be adopted upon the approval of a majority of the members voting upon their adoption in the membership meeting called for that purpose or by referendum of the membership.
 
 \vspace{1cm}
-\large{\textbf{These bylaws adopted:} \date{September 19, 2022}}
+\large{\textbf{These bylaws adopted:}} %\date{September 19, 2022}}
 \end{document}
