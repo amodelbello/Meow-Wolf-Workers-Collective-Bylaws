@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[letterpaper, top=3cm, right=3.5cm, bottom=3cm, left=3.5cm]{geometry}
+\usepackage[letterpaper, top=3cm, right=3.5cm, bottom=2cm, left=3.5cm]{geometry}
 \usepackage{
   booktabs,
   enumitem,
@@ -51,25 +51,25 @@
 % Headers/Footers
 \fancyhf{}
 \pagestyle{fancy}
-\fancyfoot[L]{\scshape\nouppercase{Meow Wolf Workers Collective \-- CWA, Local 7055}}
-\fancyfoot[R]{\thepage\ of \pageref{LastPage}}
+% \fancyfoot[L]{\scshape\nouppercase{Meow Wolf Workers Collective \-- CWA, Local 7055}}
+\fancyfoot[C]{\thepage\ of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0em}
-\renewcommand{\footrulewidth}{.01em}
+\renewcommand{\footrulewidth}{.0em}
 
 % Sections
-\sectionfont{\color{headerColor}\Large\MakeUppercase}
-\renewcommand{\thesection}{ARTICLE \Roman{section}}
-\newcommand{\article}[1]{\vspace{.75cm}\section{#1}}
+\sectionfont{\color{headerColor}\Large\raggedright}
+\renewcommand{\thesection}{Article \Roman{section}}
+\newcommand{\article}[1]{\vspace{.50cm}\section{#1}}
 
 % Sub Sections
-\subsectionfont{\color{headerColor}\Large}
+\subsectionfont{\color{headerColor}\large}
 \renewcommand{\thesubsection}{Section \arabic{subsection}}
 \newcommand{\articlesection}[1]{\vspace{.25cm}\subsection{#1}}
 
 % References
 % {article}{section}{paragraph}
 \newcommand{\fullref}[3]{%
-  \mbox{\textbf{%
+  \textbf{%
     \ifthenelse{\isempty{#1}}%
     {}%
     {\ref{#1}}%
@@ -82,7 +82,7 @@
     \ifthenelse{\isempty{#3}}%
     {}%
     {\ref{#3}}%
-  }}%
+  }%
 }
 
 % Numbered Lists
@@ -99,7 +99,7 @@
 \setlist[paralist,1]{label=(\alph*)}
 
 \title{Meow Wolf Workers Collective \--- CWA, Local 7055 \\ Local Bylaws}
-\date{\today}
+\date{}
 
 
 \begin{document}
@@ -133,8 +133,9 @@ The structure of the union shall consist of the following:
 \end{numberlist}
 
 \article{Governing Authority}
+\enlargethispage{2cm}
 
-The affairs of the union shall be governed by its \textit{members in good standing} (defined in \fullref{membership}{good-standing}{}), henceforth referred to as “(local) member(s)” or “(local) membership”  in accordance with the Constitution and policies of CWA in the following manner:
+The affairs of the union shall be governed by its \textit{members in good standing}, defined in \fullref{membership}{good-standing}{}, henceforth referred to as “(local) member(s)” or “(local) membership”  in accordance with the Constitution and policies of CWA in the following manner:
 
 \begin{itemize}
 \item Through action taken in membership meetings or by referendum of the membership.
@@ -257,7 +258,7 @@ The Local shall have the following committees:
 \articlesection{Duties of Committees}\label{duties-of-committees}
 \begin{description}[labelwidth=\linewidth, listparindent=0pt]
 \item[Membership Committee]
-Shall accept or reject membership applications in accordance with the bylaws and rules of this Local and \href{https://cwa-union.org/for-locals/cwa-constitution\#A5}{Article V} of the CWA Constitution and policies of the Union.
+Shall accept or reject membership applications in accordance with the bylaws and rules of this Local and \href{https://cwa-union.org/for-locals/cwa-constitution\#A5}{Article V of the CWA Constitution} and policies of the Union.
 
 \item[Organizing Committee]
 Shall assist the Local officers and members in organizing all non-union employees within the Local's jurisdiction as well as unorganized workers in external units.
@@ -409,7 +410,6 @@ Any member shall be eligible for election as an Officer. However, no member may 
 \end{paralist}
 
 \articlesection{Composition and Responsibilities of the Executive Board}
-The Executive Board shall be composed of the following:
 \begin{paralist}
   \item The Executive Board shall be composed of the following: Local President, Local Executive Vice President, Local Secretary-Treasurer, and Area Vice President for each Area within the Local, and two (2) additional Executive Board members.
   \item The procedures for nominating and electing additional members to the Executive Board shall be the same as apply to President, Executive Vice President, and Secretary Treasurer. Additional Executive Board members may be nominated from any Area of the Local, or be at-large members of the Local.
@@ -477,7 +477,7 @@ The Executive Board shall be composed of the following:
 
 \articlesection{Recall of Local Officers and Executive Board}
 \begin{paralist}
-  \item Any elected Officer of the union may be recalled in accordance with the provisions of \href{https://cwa-union.org/for-locals/cwa-constitution\#A21}{Article XXI, Section 2}, and \href{https://cwa-union.org/for-locals/cwa-constitution\#A22}{Article XXII, Section 8}, of the CWA Constitution. A recall petition must be preferred by twenty percent (20\%) of the membership.
+  \item Any elected Officer of the Local may be recalled in accordance with the provisions of \href{https://cwa-union.org/for-locals/cwa-constitution\#A21}{Article XXI, Section 2}, and \href{https://cwa-union.org/for-locals/cwa-constitution\#A22}{Article XXII, Section 8}, of the CWA Constitution. A recall petition must be preferred by twenty percent (20\%) of the membership.
   \item Officers and other Executive Board members shall serve in an administrative capacity only, with all the rights and responsibilities of membership, but no special authority over non-administrative matters.
 \end{paralist}
 
